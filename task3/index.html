@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>task 3</title>
+</head>
+<style>
+#list{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	list-style: none;
+	height:200px;
+	transform: translate(-50%,-50%) rotateX(180deg);
+	background-color: #ddd;
+}
+#list div{
+	width: 20px;
+	display: inline-block;
+	float:left;
+}
+</style>
+<body>
+	<div id="list">
+	</div>
+	<script type="text/javascript">
+		var array = [5,8,2,1,15,2,3,5,9,11,10,4,3,14,1,7,10,3,2,13];
+		var div2 = document.getElementById("list");
+		div2.style.width = array.length*20 + 'px';
+		for (var i = 0; i < array.length; i++) {
+	  		var newLi = document.createElement('div');
+	  		newLi.style.height = array[i]*10 + 'px';
+	  		list.appendChild(newLi);
+	  		if(array[i] > 0 && array[i] <= 5)
+	  		{
+	  			newLi.style.backgroundColor = 'green';
+	  		}
+	  		else if(array[i] > 5 && array[i] <= 10)
+	  		{
+	  			newLi.style.backgroundColor = 'yellow';
+	  		}
+	  		else{
+	  			newLi.style.backgroundColor = 'red';
+	  		}
+		}
+</script>
+</body>
+</html>
